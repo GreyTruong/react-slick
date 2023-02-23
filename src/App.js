@@ -12,13 +12,13 @@ function App() {
     const interval = setInterval(() => {
       // This is example.
       setSlideIndex((slideIndex) => slideIndex + 1);
-    }, 2000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
   return (
     <>
       <TopBigBanner slideIndex={slideIndex} />
-      {/* <Top4 slideIndex={slideIndex} /> */}
+      <Top4 slideIndex={slideIndex} />
     </>
   );
 }
