@@ -13,7 +13,7 @@ function Links({ nextSlice }) {
   useEffect(() => {
     const interval = setInterval(() => {
       // This is example.
-      setSeconds((seconds) => seconds + 5);
+      setSeconds((seconds) => seconds + 53);
       setImageIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
       //
       nextSlice(Math.random());

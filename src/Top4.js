@@ -9,37 +9,46 @@ const images = [
 class Top4 extends React.Component<Props, State> {
   state = { count: 0, intervalId: 0, imageIndex: 0 };
   intervalId: any;
+  constructor(props: Props) {
+    super(props);
+    this.state = {
+      count: 0,
+      intervalId: 0,
+      imageIndex: 0,
+    };
+    console.log(this.props);
+  }
+
   componentDidMount() {
-    const newIntervalId = setInterval(() => {
-      this.setState((prevState) => {
-        return {
-          ...prevState,
-          count: prevState.count + 1,
-          imageIndex:
-            prevState.imageIndex === images.length - 1
-              ? 0
-              : prevState.imageIndex + 1,
-        };
-      });
-      this.props.setSlideIndex(this.state.imageIndex);
-    }, 3000);
-
-    this.setState((prevState) => {
-      return {
-        ...prevState,
-        intervalId: newIntervalId,
-      };
-    });
+    // const newIntervalId = setInterval(() => {
+    //   this.setState((prevState) => {
+    //     return {
+    //       ...prevState,
+    //       count: prevState.count + 1,
+    //       imageIndex:
+    //         prevState.imageIndex === images.length - 1
+    //           ? 0
+    //           : prevState.imageIndex + 1,
+    //     };
+    //   });
+    //   this.props.setSlideIndex(this.state.imageIndex);
+    // }, 3000);
+    // this.setState((prevState) => {
+    //   return {
+    //     ...prevState,
+    //     intervalId: newIntervalId,
+    //   };
+    // });
   }
 
-  componentWillUnmount() {
-    clearInterval(this.intervalId);
-  }
+  // componentWillUnmount() {
+  //   clearInterval(this.intervalId);
+  // }
   render() {
     return (
       <>
         <img
-          src={images[this.state.imageIndex]}
+          src={images[this.props.slideIndex]}
           alt=""
           style={{ width: 500 }}
         />
