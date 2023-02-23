@@ -1,6 +1,6 @@
 import React from "react";
 // import PropTypes from "prop-types";
-
+import PropTypes from "prop-types";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -46,5 +46,13 @@ class TopBigBanner extends React.Component<Props, State> {
     );
   }
 }
+TopBigBanner.propTypes = {
+  getTopBigBannerData: PropTypes.func,
+  topBigBannerData: PropTypes.object,
+  isFetching: PropTypes.bool,
+};
+TopBigBanner.defaultProps = {
+  topBigBannerData: {},
+};
 
 export default TopBigBanner;
