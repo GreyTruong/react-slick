@@ -6,7 +6,7 @@ const images = [
   "https://img.hapitas.jp/img/images/banner/tmp/202302021605456603.jpg",
   "https://img.hapitas.jp/img/images/banner/tmp/202302091108298657.png",
 ];
-class Clinks extends React.Component<Props, State> {
+class Top4 extends React.Component<Props, State> {
   state = { count: 0, intervalId: 0, imageIndex: 0 };
   intervalId: any;
   componentDidMount() {
@@ -49,4 +49,4 @@ class Clinks extends React.Component<Props, State> {
   }
 }
 
-export default Clinks;
+export default Top4;
