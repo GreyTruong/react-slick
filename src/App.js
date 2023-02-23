@@ -4,14 +4,14 @@ import React, { useState } from "react";
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Links from "./Links";
-import Sliders from "./Sliders";
+import Clinks from "./cLink";
+import TopBigBanner from "./cSliders";
 function App() {
   const [slideIndex, setSlideIndex] = useState(0);
   return (
     <>
-      <Sliders slideIndex={slideIndex} />
-      <Links nextSlice={setSlideIndex} />
+      <Clinks setSlideIndex={setSlideIndex} />
+      <TopBigBanner slideIndex={slideIndex} />
     </>
   );
 }

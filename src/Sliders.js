@@ -16,7 +16,6 @@ function Sliders({ slideIndex }) {
       <div>
         <img
           src="https://img.hapitas.jp/img/images/banner/tmp/20230120111839508.jpg"
-          class="top_big_banner_image"
           alt=""
         />
       </div>
@@ -29,11 +28,14 @@ function Sliders({ slideIndex }) {
       <div>
         <img
           src="https://srv2.trafficgate.net/t/b/498/1396/152631_162253"
-          class="top_big_banner_image"
           alt=""
         />
       </div>
     </Slider>
   );
 }
+
+Sliders.defaultProps = {
+  slideIndex: 0,
+};
 export default Sliders;
